@@ -1,0 +1,43 @@
+<div class="class row mt3">
+    <div class="col lg6">
+        <h3>Lista de Datos Personales</h3>
+    </div>
+</div>
+
+<div class="col lg6">
+    <button class="btn btn-primary float-end">
+      Agrega un dato personal
+    </button>
+  </div>
+
+<table class="table table-hover mt-3">
+    <thead>
+        <tr>
+            <td>Identificacion</td>
+            <td>nombre</td>
+            <td>apellido</td>
+            <td>direccion</td>
+            <td>email</td>
+            <td>telefono</td>
+        </tr>
+    </thead>
+
+
+
+
+     <tbody>
+       <tr *ngFor="let datos of listdatos">
+        <td>{{datos.Identificacion}}</td>
+        <td>{{datos.nombre}}</td>
+        <td>{{datos.apellido}}</td>
+        <td>{{datos.direccion}}</td>
+        <td>{{datos.email}}</td>
+        <td>{{datos.telefono}}</td>
+        
+       </tr>
+     </tbody>
+</table>
+
+<div *ngif="listdatos.length==0" class="row mt5">
+    <h5> No hay ningun comentario registrado</h5>
+</div>
